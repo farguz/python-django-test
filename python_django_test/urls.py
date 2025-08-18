@@ -20,8 +20,10 @@ import views
 
 
 urlpatterns = [
-    path('', views.index),
+    path('', views.IndexView.as_view()),
     path('admin/', admin.site.urls),
     path('about/', views.about),
     path('articles/', include('python_django_test.article.urls')),
 ]
+
+

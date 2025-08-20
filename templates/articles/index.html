@@ -6,6 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-<div>{{ appname }}</div>
+    <div id="sidebar">
+        {% block sidebar %}
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/articles/">Статьи</a></li>
+            </ul>
+        {% endblock %}
+    </div>
+
+<p>Статья номер {{ article_id }}. Тег {{ tags }}</p>
 </body>
 </html>

@@ -1,12 +1,8 @@
 from django.urls import path
-from . import views
+from python_django_test.article.views import IndexView, ArticleView
 
 urlpatterns = [
-    # path("", views.index),
-    path("", views.IndexView.as_view()),
-    path(
-        '<str:tags>/<int:article_id>/',
-        views.TagPageView.as_view(),
-        name='article'
-        ),
+    # path('', views.index),
+    path('', IndexView.as_view()),
+    path('<int:id>/', ArticleView.as_view(), name='article_view'),
     ]
